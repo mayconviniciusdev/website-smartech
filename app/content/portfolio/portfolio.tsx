@@ -1,4 +1,8 @@
+import AnimatedNumber from "./animatedNumber";
 import InstagramFeedSite from "./instagramFeed";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMugHot, faPenClip, faSpinner, faUsersLine } from "@fortawesome/free-solid-svg-icons";
 
 export const Portfolio = () => {
 
@@ -12,6 +16,47 @@ export const Portfolio = () => {
           </div>
           
           <InstagramFeedSite/>
+        </div>
+      </div>
+
+      <div className="relative w-full py-10">
+        <img
+        src="/images/bg-banner.png"
+        alt="Imagem de background"
+        className="w-full h-[820px] lg:h-[630px] object-cover"/>
+        
+        <div className="absolute top-0 left-0 right-0 bottom-0 text-blue-white text-center text-2xl font-medium mx-5 gap-10 flex justify-center flex-col lg:flex-row lg:gap-20 lg:items-center">
+          <div>
+            <FontAwesomeIcon icon={faSpinner} />
+            <div className="py-2">
+              <AnimatedNumber value={14}/>
+            </div>
+            <p>ANOS DE <br/>EXPERIÊNCIA</p>
+          </div>
+
+          <div>
+            <FontAwesomeIcon icon={faPenClip} />
+            <div className="py-2">
+              <AnimatedNumber value={4177}/>
+            </div>
+            <p>ORDENS DE <br/>SERVIÇOS</p>
+          </div>
+
+          <div>
+            <FontAwesomeIcon icon={faUsersLine} />
+            <div className="py-2">
+              <AnimatedNumber value={1380}/>
+            </div>
+            <p>CLIENTES <br/>FELIZES</p>
+          </div>
+
+          <div>
+            <FontAwesomeIcon icon={faMugHot}/>
+            <div className="py-2">
+              <AnimatedNumber value={5137}/>
+            </div>
+            <p>XÍCARAS DE <br/>CAFÉ</p>
+          </div>
         </div>
       </div>
     </section>
