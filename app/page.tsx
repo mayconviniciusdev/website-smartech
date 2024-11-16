@@ -2,6 +2,7 @@
 
 import { About } from "./content/about";
 import { Headers } from "./content/header";
+import { Portfolio } from "./content/portfolio";
 import { Services } from "./content/services";
 
 const PageContent = () => {
@@ -10,6 +11,7 @@ const PageContent = () => {
       <Headers/>
       <About/>
       <Services/>
+      <Portfolio/>
     </main>
   );
 }
