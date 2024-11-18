@@ -1,5 +1,6 @@
 import { faFacebook, faInstagram, faWhatsapp } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { Link } from "react-scroll"
 
 export const Footer = () => {
   return (
@@ -25,7 +26,7 @@ export const Footer = () => {
             </span>
           </p>
           
-          <a href="">VOLTAR AO TOPO</a>
+          <Link to="initial" className="cursor-pointer">VOLTAR AO TOPO</Link>
         </div>
       </div>
     </footer>
