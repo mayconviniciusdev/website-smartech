@@ -3,11 +3,13 @@ import InstagramFeedSite from "./instagramFeed";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMugHot, faPenClip, faSpinner, faUsersLine } from "@fortawesome/free-solid-svg-icons";
+import { Element } from "react-scroll";
 
 export const Portfolio = () => {
 
   return (
-    <section>
+    <Element name="portfolio">
+      <section>
       <div className="max-w-6xl mx-auto">
         <div className="mx-5">
           <div className="mb-5 flex gap-2 items-center">
@@ -59,6 +61,7 @@ export const Portfolio = () => {
           </div>
         </div>
       </div>
-    </section>
+      </section>
+    </Element>
   )
 }
