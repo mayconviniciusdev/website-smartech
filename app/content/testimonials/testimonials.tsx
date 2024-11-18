@@ -10,7 +10,7 @@ import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
 
 export const Testimonials = () => {
   return (
-    <section className="max-w-4xl mx-auto text-center pb-20">
+    <section className="max-w-4xl mx-auto text-center">
       <div className="mx-5">
         <h2 className="font-bold text-2xl text-blue">O QUE DIZEM SOBRE A GENTE?</h2>
 
