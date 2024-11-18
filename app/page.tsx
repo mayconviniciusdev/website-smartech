@@ -1,6 +1,7 @@
 "use client";
 
 import { About } from "./content/about";
+import { Contact } from "./content/contact";
 import { Headers } from "./content/header";
 import { Portfolio } from "./content/portfolio";
 import { Services } from "./content/services";
@@ -14,6 +15,7 @@ const PageContent = () => {
       <Services/>
       <Portfolio/>
       <Testimonials/>
+      <Contact/>
     </main>
   );
 }
