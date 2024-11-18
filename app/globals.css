@@ -7,3 +7,7 @@ body { background-color: #F6F6F6; }
 .custom-timeline::before { background-color: #052B47 !important; width: 2px !important; }
 .vertical-timeline-element-content p { font-weight: 400 !important }
 .vertical-timeline-element-icon svg { width: 16px !important; height: 16px !important; margin-left: -8px !important; margin-top: -8px !important;}
+
+.swiper-wrapper {align-items: center !important;}
+.swiper-pagination-bullet {width: 15px !important; height: 15px !important; margin: 0 5px !important;}
+.swiper-pagination-bullet-active {background-color: #052B47 !important;}

@@ -4,6 +4,7 @@ import { About } from "./content/about";
 import { Headers } from "./content/header";
 import { Portfolio } from "./content/portfolio";
 import { Services } from "./content/services";
+import { Testimonials } from "./content/testimonials";
 
 const PageContent = () => {
   return (
@@ -12,6 +13,7 @@ const PageContent = () => {
       <About/>
       <Services/>
       <Portfolio/>
+      <Testimonials/>
     </main>
   );
 }
