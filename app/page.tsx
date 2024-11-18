@@ -2,6 +2,7 @@
 
 import { About } from "./content/about";
 import { Contact } from "./content/contact";
+import { Footer } from "./content/footer";
 import { Headers } from "./content/header";
 import { Portfolio } from "./content/portfolio";
 import { Services } from "./content/services";
@@ -16,6 +17,7 @@ const PageContent = () => {
       <Portfolio/>
       <Testimonials/>
       <Contact/>
+      <Footer/>
     </main>
   );
 }
