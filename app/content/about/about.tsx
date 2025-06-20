@@ -6,12 +6,20 @@ import "react-vertical-timeline-component/style.min.css";
 import timelineEvents from "./aboutTimeline";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import pillars from "./aboutPillars";
 
 export const About = () => {
   const [showMore, setShowMore] = useState(false);
   const [visibleEvents, setVisibleEvents] = useState(2);
+  const [isSafari, setIsSafari] = useState(false);
+
+  useEffect(() => {
+    const ua = navigator.userAgent;
+    const safari = /^((?!chrome|android).)*safari/i.test(ua);
+    setIsSafari(safari);
+  }, []);
+
 
   const toggleShowMore = () => {
     setShowMore((prevState) => {
@@ -25,7 +33,7 @@ export const About = () => {
   return (
     <section>
       <div className="relative h-[700px]">
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-10">
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
           <p className="text-3xl font-bold mb-2">SOMOS<br/>ESPECIALIZADOS EM</p>
           <p className="text-2xl font-medium">manutenção de computadores,<br/> notebooks e celulares.</p>
 
@@ -38,13 +46,18 @@ export const About = () => {
           </Link>
         </div>
 
-        <video
-        src="/images/small.mp4"
-        className="w-[100%] h-full object-cover z-0"
-        autoPlay
-        playsInline
-        loop 
-        muted/>
+        {isSafari ? 
+        (<img
+        src="images/bg-smartech.mp4"
+        alt="Video poster"
+        className="w-[100%] h-full object-cover"/>) 
+        : (<video
+          src="images/bg-smartech.mp4"
+          className="w-[100%] h-full object-cover"
+          muted
+          autoPlay
+          playsInline
+          loop/>)}
       </div>
 
       <Element name="about">
