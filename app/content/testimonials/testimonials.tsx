@@ -16,7 +16,7 @@ export const Testimonials = () => {
 
         <div className="mt-8">
           <Swiper
-          slidesPerView={2}
+          breakpoints={{ 0: { slidesPerView: 1 }, 768: {slidesPerView: 2}, 1024: { slidesPerView: 2 }}}
           spaceBetween={20}
           modules={[Autoplay, Pagination, A11y]}
           pagination={{ clickable: true, el: ".custom-pagination" }}
@@ -32,7 +32,6 @@ export const Testimonials = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-
           <div className="custom-pagination mt-8"></div>
         </div>
       </div>
