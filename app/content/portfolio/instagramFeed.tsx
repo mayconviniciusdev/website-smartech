@@ -26,7 +26,7 @@ const InstagramFeed = () => {
         setFeed(data);
       }
         
-      catch (err) { setError("Erro ao carregar os posts."); } 
+      catch { setError("Erro ao carregar os posts."); } 
       finally { setIsLoading(false); }
     };
 
