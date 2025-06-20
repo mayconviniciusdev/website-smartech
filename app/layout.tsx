@@ -3,6 +3,7 @@ import '../styles/globals.css';
 import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "SMARTECH",
+  icons: {icon: "favicon.ico"},
 };
 
 import { Prompt } from "next/font/google";
