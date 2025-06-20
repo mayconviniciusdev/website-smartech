@@ -5,14 +5,14 @@ import 'leaflet/dist/leaflet.css';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { Element } from "react-scroll";
 
-export const Contact = () => {
+const Contact = () => {
   const customIcon = new L.Icon({
     iconUrl: 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="40" height="40"><path fill="#052B47" d="${faLocationDot.icon[4]}"></path></svg>`),
     iconSize: [30, 30],
   });
   
   return (
-    <Element name="contact">
+    <Element name="contact">a
       <section className="max-w-6xl mx-auto py-10">
         <div className="mx-5">
           <h2 className="font-bold text-2xl text-blue">ENTRE EM CONTATO</h2>
@@ -83,3 +83,4 @@ export const Contact = () => {
     
   )
 }
+export default Contact;
