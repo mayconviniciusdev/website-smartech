@@ -23,8 +23,7 @@ export const Portfolio = () => {
 
       <div className="relative w-full py-10">
         <img
-        src="/images/bg-banner.png"
-        alt="Imagem de background"
+        src="images/bg-banner.png"
         className="w-full h-[820px] lg:h-[630px] object-cover"/>
         
         <div className="absolute top-0 left-0 right-0 bottom-0 text-blue-white text-center text-2xl font-medium mx-5 gap-10 flex justify-center flex-col lg:flex-row lg:gap-20 lg:items-center">
