@@ -1,5 +1,5 @@
-import AnimatedNumber from "./animatedNumber";
-import InstagramFeedSite from "./instagramFeed";
+import AnimatedNumber from "../../components/animatedNumber";
+import InstagramFeedSite from "../../components/instagramFeed";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMugHot, faPenClip, faSpinner, faUsersLine } from "@fortawesome/free-solid-svg-icons";
