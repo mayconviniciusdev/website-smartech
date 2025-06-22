@@ -5,7 +5,7 @@ import 'leaflet/dist/leaflet.css';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { Element } from "react-scroll";
 
-const Contact = () => {
+export default function Contact() {
   const customIcon = new L.Icon({
     iconUrl: 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="40" height="40"><path fill="#052B47" d="${faLocationDot.icon[4]}"></path></svg>`),
     iconSize: [30, 30],
@@ -83,4 +83,3 @@ const Contact = () => {
     
   )
 }
-export default Contact;

@@ -1,14 +1,14 @@
 "use client";
 
 import dynamic from "next/dynamic";
-const Contact = dynamic(() => import("./content/contact/contact"), { ssr: false });
+const Contact = dynamic(() => import("./content/contact"), { ssr: false });
 
-import { About } from "./content/about";
-import { Footer } from "./content/footer";
 import { Headers } from "./content/header";
-import { Portfolio } from "./content/portfolio";
+import { About } from "./content/about";
 import { Services } from "./content/services";
+import { Portfolio } from "./content/portfolio";
 import { Testimonials } from "./content/testimonials";
+import { Footer } from "./content/footer";
 
 const PageContent = () => {
   return (
