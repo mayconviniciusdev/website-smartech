@@ -3,11 +3,11 @@ import { Element, Link } from "react-scroll";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 
-import timelineEvents from "./aboutTimeline";
+import timelineEvents from "../../data/aboutTimeline";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
-import pillars from "./aboutPillars";
+import pillars from "../../data/aboutPillars";
 
 export const About = () => {
   const [showMore, setShowMore] = useState(false);
