@@ -4,7 +4,7 @@ import { Link } from "react-scroll"
 
 export const Footer = () => {
   return (
-    <footer className="max-w-6xl mx-auto mb-10">
+    <footer className="max-w-6xl mx-auto my-10">
       <div className="border-blue border mx-20"></div>
 
       <div className="mx-5 text-center">
@@ -21,12 +21,12 @@ export const Footer = () => {
 
         <div className="text-blue/50 font-medium">
           <p className="mb-1">DESENVOLVIDO POR:
-            <span className="text-blue-cyan">
+            <span className="text-blue-cyan text-sm">
               <a target="_blank" href="https://www.mayconviniciusdev.com/"> MAYCON VINICIUS</a>
             </span>
           </p>
           
-          <Link to="initial" className="cursor-pointer">VOLTAR AO TOPO</Link>
+          <Link to="initial" className="cursor-pointer text-sm">VOLTAR AO TOPO</Link>
         </div>
       </div>
     </footer>
