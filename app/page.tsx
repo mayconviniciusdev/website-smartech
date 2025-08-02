@@ -14,9 +14,9 @@ const PageContent = () => {
   return (
     <main>
       <Headers/>
-      <About/>
       <Services/>
       <Portfolio/>
+      <About/>
       <Testimonials/>
       <Contact/>
       <Footer/>
