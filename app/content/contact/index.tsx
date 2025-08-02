@@ -12,8 +12,8 @@ export default function Contact() {
   });
   
   return (
-    <Element name="contact">a
-      <section className="max-w-6xl mx-auto py-10">
+    <Element name="contact">
+      <section className="max-w-6xl mx-auto">
         <div className="mx-5">
           <h2 className="font-bold text-2xl text-blue">ENTRE EM CONTATO</h2>
           <p className="text-blue/50">Envie-nos um e-mail com todas as perguntas ou dúvidas ou use nossos dados de contato.</p>
@@ -54,7 +54,7 @@ export default function Contact() {
             <div className="lg:text-end lg:mr-10 lg:mt-0 lg:block md:flex justify-around mt-10 gap-10 ">
               <div className="text-blue/50 lg:mb-8">
                 <h2 className="pb-2 font-semibold">ENDEREÇO:</h2>
-                <p>Av. XV DE NOVEMBRO, 1023 - CENTRO | TAPERA</p>
+                <p>Av. XV de Novembro, 1023 - Centro | Tapera</p>
                 <p>Rio Grande do Sul - 99490-000</p>
               </div>
 
