@@ -6,7 +6,7 @@ import { Element } from "react-scroll";
 export const Services = () => {
   return (
     <Element name="services">
-      <section className="max-w-6xl mx-auto pt-12 pb-10">
+      <section className="max-w-6xl mx-auto my-10">
         <div className="mx-5">
           <h2 className="font-bold text-2xl text-blue mb-5">O QUE NÓS FAZEMOS?</h2>
 
