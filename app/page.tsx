@@ -5,7 +5,7 @@ const Contact = dynamic(() => import("./components/sections/contact"), { ssr: fa
 
 import { Headers } from "./components/sections/header";
 import { About } from "./components/sections/about";
-import { Services } from "./content/services";
+import { Services } from "./components/sections/services";
 import { Portfolio } from "./components/sections/portfolio";
 import { Testimonials } from "./content/testimonials";
 import { Footer } from "./components/sections/footer";
