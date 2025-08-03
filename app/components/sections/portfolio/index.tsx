@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Element } from "react-scroll";
 
-import AnimatedNumber from "../../components/animatedNumber";
+import AnimatedNumber from "./animatedNumber";
 
 import InstagramFeed from "@/app/components/instagramComponent/instagramFeed";
 import { InstagramFetch } from "@/app/components/instagramComponent/instagramFetch";
@@ -14,23 +14,22 @@ export const Portfolio = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
-useEffect(() => {
-  const getFeed = async () => {
-    try 
-    {const data = await InstagramFetch();
-    setFeed(data);}
+  useEffect(() => {
+    const getFeed = async () => {
+      try 
+      {const data = await InstagramFetch();
+      setFeed(data);}
+        
+      catch (err: any) 
+      {setError(err.message)} 
       
-    catch (err: any) 
-    {setError(err.message)} 
-    
-    finally 
-    {await new Promise((resolve) => setTimeout(resolve, 2000));
-    setLoading(false);}
-  };
+      finally 
+      {await new Promise((resolve) => setTimeout(resolve, 2000));
+      setLoading(false);}
+    };
 
-  getFeed();
-}, []);
-
+    getFeed();
+  }, []);
 
   return (
     <Element name="portfolio">

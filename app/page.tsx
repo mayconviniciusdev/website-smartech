@@ -6,7 +6,7 @@ const Contact = dynamic(() => import("./content/contact"), { ssr: false });
 import { Headers } from "./content/header";
 import { About } from "./content/about";
 import { Services } from "./content/services";
-import { Portfolio } from "./content/portfolio";
+import { Portfolio } from "./components/sections/portfolio";
 import { Testimonials } from "./content/testimonials";
 import { Footer } from "./content/footer";
 
