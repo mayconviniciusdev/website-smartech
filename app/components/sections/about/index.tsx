@@ -4,8 +4,8 @@ import { Element } from "react-scroll";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 
-import timelineEvents from "../../data/aboutTimeline";
-import pillars from "../../data/aboutPillars";
+import timelineEvents from "./aboutTimeline";
+import pillars from "./aboutPillars";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
