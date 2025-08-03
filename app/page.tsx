@@ -8,7 +8,7 @@ import { About } from "./components/sections/about";
 import { Services } from "./content/services";
 import { Portfolio } from "./components/sections/portfolio";
 import { Testimonials } from "./content/testimonials";
-import { Footer } from "./content/footer";
+import { Footer } from "./components/sections/footer";
 
 const PageContent = () => {
   return (
