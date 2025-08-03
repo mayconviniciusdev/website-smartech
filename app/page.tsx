@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-const Contact = dynamic(() => import("./content/contact"), { ssr: false });
+const Contact = dynamic(() => import("./components/sections/contact"), { ssr: false });
 
 import { Headers } from "./content/header";
 import { About } from "./components/sections/about";
