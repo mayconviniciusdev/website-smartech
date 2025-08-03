@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 const Contact = dynamic(() => import("./components/sections/contact"), { ssr: false });
 
-import { Headers } from "./content/header";
+import { Headers } from "./components/sections/header";
 import { About } from "./components/sections/about";
 import { Services } from "./content/services";
 import { Portfolio } from "./components/sections/portfolio";
