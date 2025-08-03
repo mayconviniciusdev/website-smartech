@@ -1,11 +1,36 @@
+import { useEffect, useState } from "react";
+import { Element } from "react-scroll";
+
 import AnimatedNumber from "../../components/animatedNumber";
-import InstagramFeedSite from "../../components/instagramFeed";
+
+import InstagramFeed from "@/app/components/instagramFeed";
+import { fetchInstagram } from "@/app/utils/fetchInstagram";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMugHot, faPenClip, faSpinner, faUsersLine } from "@fortawesome/free-solid-svg-icons";
-import { Element } from "react-scroll";
 
 export const Portfolio = () => {
+  const [feed, setFeed] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
+
+useEffect(() => {
+  const getFeed = async () => {
+    try 
+    {const data = await fetchInstagram();
+    setFeed(data);}
+      
+    catch (err: any) 
+    {setError(err.message)} 
+    
+    finally 
+    {await new Promise((resolve) => setTimeout(resolve, 2000));
+    setLoading(false);}
+  };
+
+  getFeed();
+}, []);
+
 
   return (
     <Element name="portfolio">
@@ -17,11 +42,13 @@ export const Portfolio = () => {
             <p className="text-sm">| GALERIA DO INSTAGRAM</p>
           </div>
           
-          <InstagramFeedSite/>
+          {loading && <p>Carregando feed...</p>}
+          {!loading && error && <p className="text-red-500">{error}</p>}
+          {!loading && !error && <InstagramFeed feed={feed}/>}
         </div>
       </div>
 
-      <div className="relative w-full py-10">
+      <div className="relative w-full my-10">
         <img
         src="images/bg-banner.png"
         className="w-full h-[820px] lg:h-[630px] object-cover"/>

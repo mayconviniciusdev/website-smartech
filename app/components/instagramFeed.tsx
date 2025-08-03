@@ -1,40 +1,19 @@
-import { useEffect, useState } from "react";
-import { fetchInstagramFeed } from "./instagramFetch";
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { A11y, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/autoplay'; 
 
-interface InstagramFeed {
+interface InstagramFeedItem {
   id: string;
   media_url?: string;
   thumbnail_url?: string;
   media_type: string;
   permalink: string;
 }
+interface Props { feed: InstagramFeedItem[]; error?: string; }
 
-const InstagramFeed = () => {
-  const [feed, setFeed] = useState<InstagramFeed[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    const loadFeed = async () => {
-      try {
-        const data = await fetchInstagramFeed();
-        setFeed(data);
-      }
-        
-      catch { setError("Erro ao carregar os posts."); } 
-      finally { setIsLoading(false); }
-    };
-
-    loadFeed();
-  }, []);
-
-  if (isLoading) return <p>Carregando...</p>;
-  if (error) return <p>{error}</p>;
+const InstagramFeed = ({ feed }: Props) => {
+  if (!feed || feed.length === 0) return null;
 
   return (
     <Swiper
@@ -43,7 +22,6 @@ const InstagramFeed = () => {
     breakpoints={{ 640: { slidesPerView: 2 }, 768: { slidesPerView: 3 }, 1024: { slidesPerView: 4 }}}
     autoplay={{ delay: 2500, disableOnInteraction: false }}
     loop={true}>
-      <div>
         {feed.map((post) => (
           <SwiperSlide key={post.id}>
             {(post.media_type === "IMAGE" || post.media_type === "CAROUSEL_ALBUM") && (
@@ -65,7 +43,6 @@ const InstagramFeed = () => {
             )}
           </SwiperSlide>
         ))}
-      </div>
     </Swiper>
   );
 };
