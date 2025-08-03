@@ -1,9 +1,7 @@
 <?php
 header('Content-Type: application/json');
 
-// Inclui o arquivo .env.php
-$config = require __DIR__ . '/.env.php';  // Ajuste o caminho conforme sua estrutura
-
+$config = require __DIR__ . '/.env.php'; 
 $instagramToken = $config['INSTAGRAM_ACCESS_TOKEN'] ?? null;
 $instagramBusinessAccountId = $config['INSTAGRAM_BUSINESS_ACCOUNT_ID'] ?? null;
 

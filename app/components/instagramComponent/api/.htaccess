@@ -1,0 +1,7 @@
+# bloqueia o acesso direto a arquivos sensíveis dentro da pasta /api
+<FilesMatch "^(renewInstagramToken\.php|\.env\.php)$">
+  Require all denied
+</FilesMatch>
+
+# impede a listagem de diretórios para /api
+Options -Indexes

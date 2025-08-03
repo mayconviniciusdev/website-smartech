@@ -3,8 +3,8 @@ import { Element } from "react-scroll";
 
 import AnimatedNumber from "../../components/animatedNumber";
 
-import InstagramFeed from "@/app/components/instagramFeed";
-import { fetchInstagram } from "@/app/utils/fetchInstagram";
+import InstagramFeed from "@/app/components/instagramComponent/instagramFeed";
+import { InstagramFetch } from "@/app/components/instagramComponent/instagramFetch";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMugHot, faPenClip, faSpinner, faUsersLine } from "@fortawesome/free-solid-svg-icons";
@@ -17,7 +17,7 @@ export const Portfolio = () => {
 useEffect(() => {
   const getFeed = async () => {
     try 
-    {const data = await fetchInstagram();
+    {const data = await InstagramFetch();
     setFeed(data);}
       
     catch (err: any) 
