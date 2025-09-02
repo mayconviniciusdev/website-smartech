@@ -12,18 +12,30 @@ if (!$instagramToken || !$instagramBusinessAccountId) {
 }
 
 $url = "https://graph.facebook.com/v21.0/{$instagramBusinessAccountId}/media"
-     . "?fields=id,media_type,media_url,thumbnail_url,permalink"
-     . "&access_token={$instagramToken}";
+    . "?fields=id,media_type,media_url,thumbnail_url,permalink"
+    . "&access_token={$instagramToken}";
 
-$response = @file_get_contents($url); 
+$ch = curl_init($url);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
+$response = curl_exec($ch);
+$curlErr = curl_error($ch);
+$httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+curl_close($ch);
 
-if ($response === FALSE) {
+if ($response === FALSE || $httpCode >= 400) {
     http_response_code(500);
-    echo json_encode(['error' => 'Erro ao acessar a API do Instagram.']);
+    echo json_encode(['error' => 'Erro ao acessar a API do Instagram: ' . $curlErr]);
     exit;
 }
 
 $data = json_decode($response, true);
+
+if (!is_array($data)) {
+    http_response_code(500);
+    echo json_encode(['error' => 'Resposta inválida da API do Instagram.', 'raw' => $response]);
+    exit;
+}
 
 if (isset($data['error'])) {
     http_response_code(500);
