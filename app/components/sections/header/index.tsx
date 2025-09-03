@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Element, Link } from "react-scroll";
 
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
@@ -15,13 +15,6 @@ const menuItems: MenuItem[] = [
 export const Headers = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => {setMenuOpen(!menuOpen);};
-
-  const [isSafari, setIsSafari] = useState(false);
-  useEffect(() => {
-    const ua = navigator.userAgent;
-    const safari = /^((?!chrome|android).)*safari/i.test(ua);
-    setIsSafari(safari);
-  }, []);
 
   return (
     <Element name="initial">
@@ -99,18 +92,12 @@ export const Headers = () => {
           </Link>
         </div>
 
-        {isSafari ? 
-        (<img
-        src="images/bg-smartech.mp4"
-        alt="Video poster"
-        className="w-[100%] h-full object-cover z-0"/>) 
-        : (<video
-          src="images/bg-smartech.mp4"
-          className="w-[100%] h-full object-cover z-0"
-          muted
-          autoPlay
-          playsInline
-          loop/>)}
+        <video
+        className="w-full h-full object-cover z-0"
+        autoPlay loop playsInline muted
+        poster="https://smartechrs.com.br/images/bg-smartech-poster.jpg">
+          <source src="https://smartechrs.com.br/images/bg-smartech.mp4" type="video/mp4"/>
+        </video>
       </div>
     </Element>
   )
