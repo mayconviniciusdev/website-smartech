@@ -92,12 +92,7 @@ export const Headers = () => {
           </Link>
         </div>
 
-        <video
-        className="w-full h-full object-cover z-0"
-        autoPlay loop playsInline muted
-        poster="https://smartechrs.com.br/images/bg-smartech-poster.jpg">
-          <source src="https://smartechrs.com.br/images/bg-smartech.mp4" type="video/mp4"/>
-        </video>
+        <img src="images/bg-smartech-poster.png" className="w-full h-full object-cover z-0"/>
       </div>
     </Element>
   )
